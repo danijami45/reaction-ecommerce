@@ -8,7 +8,7 @@ function Footer() {
               <div className="col-lg-4 col-md-6">
                 <div className="footer-widget footer-about">
                   <a href="index.html" className="logo">
-                    <span className="sitename">FashionStore</span>
+                    <span className="sitename">ReactION</span>
                   </a>
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
