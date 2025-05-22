@@ -1,3 +1,4 @@
+import { base_url } from '../constants';
 function HeaderNavBar() {
   return (
     <div className="header-nav">
@@ -5,12 +6,12 @@ function HeaderNavBar() {
         <nav id="navmenu" className="navmenu">
           <ul>
             <li>
-              <a href="index.html" className="active">
+              <a href={base_url} className="active">
                 Home
               </a>
             </li>
             <li>
-              <a href="category.html">Category</a>
+              <a href={base_url + '/category'}>Category</a>
             </li>
             <li>
               <a href="product-details.html">Product Details</a>

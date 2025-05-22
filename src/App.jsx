@@ -2,8 +2,27 @@ import { useEffect } from 'react';
 import Header from './components/Header';
 import Content from './components/Content';
 import Footer from './components/Footer';
+import Category from './components/Category';
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
+import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
+
+const Layout = () => (
+  <div
+    style={{
+      display: 'flex',
+      flexDirection: 'column',
+      minHeight: '100vh',
+      fontFamily: 'Arial, sans-serif',
+    }}
+  >
+    <Header />
+    <div style={{ flex: 1 }}>
+      <Outlet />
+    </div>
+    <Footer />
+  </div>
+);
 
 function App() {
   useEffect(() => {
@@ -34,19 +53,29 @@ function App() {
     }, 100); // 100ms delay is usually enough
   }, []);
 
+  // return (
+  //   <div
+  //     style={{
+  //       display: 'flex',
+  //       flexDirection: 'column',
+  //       minHeight: '100vh',
+  //       fontFamily: 'Arial, sans-serif',
+  //     }}
+  //   >
+  //     <Header />
+  //     <Content />
+  //     <Footer />
+  //   </div>
+  // );
   return (
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        minHeight: '100vh',
-        fontFamily: 'Arial, sans-serif',
-      }}
-    >
-      <Header />
-      <Content />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Content />} />
+          <Route path="category" element={<Category />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

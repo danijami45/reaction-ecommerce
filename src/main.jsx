@@ -8,6 +8,7 @@ import './theme/assets/vendor/aos/aos.css';
 import './theme/assets/vendor/glightbox/css/glightbox.min.css';
 import './theme/assets/vendor/drift-zoom/drift-basic.css';
 import './theme/assets/css/main.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 import App from './App.jsx';
 import './index.css';

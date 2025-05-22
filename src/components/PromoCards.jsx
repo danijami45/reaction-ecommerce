@@ -1,116 +1,62 @@
+import PromoCardBox from './sub_components/PromoCardBox';
+
 function PromoCards() {
+  let promoCard1 = {
+    data_aos_delay: '100',
+    small_text: 'Etiam vel augue 222',
+    promo_title: 'Nullam quis ante',
+    promo_description:
+      'Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu in enim justo rhoncus ut.',
+    btn_href: '#',
+    btn_label: 'Shop Now',
+    img_src: 'src/theme/assets/img/product/product-1.webp',
+  };
+
+  let promoCard2 = {
+    data_aos_delay: '200',
+    small_text: 'Maecenas tempus',
+    promo_title: 'Sed fringilla mauris',
+    promo_description:
+      'Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu in enim justo rhoncus ut.',
+    btn_href: '#',
+    btn_label: 'Shop Now',
+    img_src: 'src/theme/assets/img/product/product-2.webp',
+  };
+
+  let promoCard3 = {
+    data_aos_delay: '300',
+    small_text: 'Aenean commodo',
+    promo_title: 'Fusce vulputate eleifend',
+    promo_description:
+      'Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu in enim justo rhoncus ut.',
+    btn_href: '#',
+    btn_label: 'Shop Now',
+    img_src: 'src/theme/assets/img/product/product-f-1.webp',
+  };
+
+  let promoCard4 = {
+    data_aos_delay: '400',
+    small_text: 'Pellentesque auctor',
+    promo_title: 'Vestibulum dapibus nunc',
+    promo_description:
+      'Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu in enim justo rhoncus ut.',
+    btn_href: '#',
+    btn_label: 'Shop Now',
+    img_src: 'src/theme/assets/img/product/product-m-1.webp',
+  };
+
   return (
     <section id="promo-cards" className="promo-cards section">
       <div className="container" data-aos="fade-up" data-aos-delay={100}>
         <div className="row g-4">
           {/* Promo Card 1 */}
-          <div
-            className="col-md-6 col-lg-3"
-            data-aos="fade-up"
-            data-aos-delay={100}
-          >
-            <div className="promo-card card-1">
-              <div className="promo-content">
-                <p className="small-text">Etiam vel augue</p>
-                <h3 className="promo-title">Nullam quis ante</h3>
-                <p className="promo-description">
-                  Donec pede justo, fringilla vel, aliquet nec, vulputate eget,
-                  arcu in enim justo rhoncus ut.
-                </p>
-                <a href="#" className="btn-shop">
-                  Shop Now
-                </a>
-              </div>
-              <div className="promo-image">
-                <img
-                  src="src/theme/assets/img/product/product-1.webp"
-                  alt="Product"
-                  className="img-fluid"
-                />
-              </div>
-            </div>
-          </div>
+          <PromoCardBox data={promoCard1} />
           {/* Promo Card 2 */}
-          <div
-            className="col-md-6 col-lg-3"
-            data-aos="fade-up"
-            data-aos-delay={200}
-          >
-            <div className="promo-card card-2">
-              <div className="promo-content">
-                <p className="small-text">Maecenas tempus</p>
-                <h3 className="promo-title">Sed fringilla mauris</h3>
-                <p className="promo-description">
-                  Donec pede justo, fringilla vel, aliquet nec, vulputate eget,
-                  arcu in enim justo rhoncus ut.
-                </p>
-                <a href="#" className="btn-shop">
-                  Shop Now
-                </a>
-              </div>
-              <div className="promo-image">
-                <img
-                  src="src/theme/assets/img/product/product-2.webp"
-                  alt="Product"
-                  className="img-fluid"
-                />
-              </div>
-            </div>
-          </div>
+          <PromoCardBox data={promoCard2} />
           {/* Promo Card 3 */}
-          <div
-            className="col-md-6 col-lg-3"
-            data-aos="fade-up"
-            data-aos-delay={300}
-          >
-            <div className="promo-card card-3">
-              <div className="promo-content">
-                <p className="small-text">Aenean commodo</p>
-                <h3 className="promo-title">Fusce vulputate eleifend</h3>
-                <p className="promo-description">
-                  Donec pede justo, fringilla vel, aliquet nec, vulputate eget,
-                  arcu in enim justo rhoncus ut.
-                </p>
-                <a href="#" className="btn-shop">
-                  Shop Now
-                </a>
-              </div>
-              <div className="promo-image">
-                <img
-                  src="src/theme/assets/img/product/product-f-1.webp"
-                  alt="Product"
-                  className="img-fluid"
-                />
-              </div>
-            </div>
-          </div>
+          <PromoCardBox data={promoCard3} />
           {/* Promo Card 4 */}
-          <div
-            className="col-md-6 col-lg-3"
-            data-aos="fade-up"
-            data-aos-delay={400}
-          >
-            <div className="promo-card card-4">
-              <div className="promo-content">
-                <p className="small-text">Pellentesque auctor</p>
-                <h3 className="promo-title">Vestibulum dapibus nunc</h3>
-                <p className="promo-description">
-                  Donec pede justo, fringilla vel, aliquet nec, vulputate eget,
-                  arcu in enim justo rhoncus ut.
-                </p>
-                <a href="#" className="btn-shop">
-                  Shop Now
-                </a>
-              </div>
-              <div className="promo-image">
-                <img
-                  src="src/theme/assets/img/product/product-m-1.webp"
-                  alt="Product"
-                  className="img-fluid"
-                />
-              </div>
-            </div>
-          </div>
+          <PromoCardBox data={promoCard4} />
         </div>
       </div>
     </section>

@@ -1,4 +1,4 @@
-import ButtonShop from './buttons/ButtonShop';
+import ButtonShop from './sub_components/ButtonShop';
 function Banner() {
   return (
     <section className="ecommerce-hero-2 hero section" id="hero">
