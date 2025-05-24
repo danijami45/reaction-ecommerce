@@ -8,7 +8,7 @@ import ProductList from './ProductList';
 
 import AOS from 'aos';
 
-function Content() {
+function HomePage() {
   useEffect(() => {
     AOS.init();
   }, []);
@@ -34,4 +34,4 @@ function Content() {
   );
 }
 
-export default Content;
+export default HomePage;

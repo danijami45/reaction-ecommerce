@@ -11,16 +11,13 @@ function HeaderNavBar() {
               </a>
             </li>
             <li>
-              <a href={base_url + '/category'}>Category</a>
+              <a href={base_url + '/categories'}>Categories</a>
             </li>
             <li>
-              <a href="product-details.html">Product Details</a>
+              <a href={base_url + '/about'}>About</a>
             </li>
             <li>
-              <a href="about.html">About</a>
-            </li>
-            <li>
-              <a href="contact.html">Contact</a>
+              <a href={base_url + '/contact'}>Contact</a>
             </li>
           </ul>
         </nav>

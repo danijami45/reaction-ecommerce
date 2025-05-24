@@ -1,8 +1,10 @@
 import { useEffect } from 'react';
 import Header from './components/Header';
-import Content from './components/Content';
+import HomePage from './components/HomePage';
 import Footer from './components/Footer';
-import Category from './components/Category';
+import CategoriesPage from './components/CategoriesPage';
+import AboutPage from './components/AboutPage';
+import ContactPage from './components/ContactPage';
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
 import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
@@ -50,29 +52,30 @@ function App() {
         effect: 'slide',
         direction: 'vertical',
       });
+
+      const swiper = new Swiper('.testimonials-slider', {
+        slidesPerView: 1,
+        loop: true,
+        speed: 600,
+        autoplay: {
+          delay: 5000,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
     }, 100); // 100ms delay is usually enough
   }, []);
 
-  // return (
-  //   <div
-  //     style={{
-  //       display: 'flex',
-  //       flexDirection: 'column',
-  //       minHeight: '100vh',
-  //       fontFamily: 'Arial, sans-serif',
-  //     }}
-  //   >
-  //     <Header />
-  //     <Content />
-  //     <Footer />
-  //   </div>
-  // );
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Content />} />
-          <Route path="category" element={<Category />} />
+          <Route index element={<HomePage />} />
+          <Route path="/categories" element={<CategoriesPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/contact" element={<ContactPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
